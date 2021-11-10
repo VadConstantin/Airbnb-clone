@@ -1,0 +1,23 @@
+
+<div class="container">
+  <h1>All our flats (<%= @flats.length %>)</h1>
+  <ul class="p-0">
+    <div class="row">
+      <% @flats.each do |flat| %>
+        <div class="col-4">
+          <div class="card-trip">
+            <div class="card-trip-infos">
+              <li>
+                <h2><%= flat.description %></h2>
+                <p><%= flat.address %></p>
+                  <div>
+                  <h2 class="card-trip-pricing text-end"><%= flat.price_per_night %>€</h2>
+                </div>
+              </li>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </ul>
+</div>
